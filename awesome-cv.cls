@@ -775,6 +775,8 @@
 \DeclareFieldFormat[misc]{title}{#1\par}
 \DeclareFieldFormat[report]{title}{#1\par}
 \DeclareFieldFormat[incollection]{title}{#1\par}
+\DeclareFieldFormat[patent]{title}{#1\par}
+\DeclareFieldFormat[thesis]{title}{#1\par}
 
 \DeclareBibliographyDriver{article}{%
   \fontsize{9pt}{1em}\bodyfont%
@@ -868,6 +870,44 @@
     \printfield{type}%
     \setunit{\space}%
     \printfield{number}%
+    \setunit{\addcomma\space}%
+    \printfield{year}%
+    \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{patent}{%
+  \fontsize{9pt}{1em}\bodyfont%
+  \printfield{title}%
+  \newblock%
+  \printnames{author}%
+  \par%
+  \newblock%
+  {%
+    \fontsize{8pt}{1em}\bodyfontlight\color{graytext}%
+    \printnames{holder}%
+    \setunit{\addcomma\space}%
+    \printfield{number}%
+    \setunit{\addcomma\space}%
+    \usebibmacro{date}%
+    \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{thesis}{%
+  \fontsize{9pt}{1em}\bodyfont%
+  \printfield{title}%
+  \newblock%
+  \printnames{author}%
+  \par%
+  \newblock%
+  {%
+    \fontsize{8pt}{1em}\bodyfontlight\color{graytext}%
+    \printlist{institution}%
+    \setunit{\addcomma\space}%
+    \printfield{type}%
     \setunit{\addcomma\space}%
     \printfield{year}%
     \newunit%
