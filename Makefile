@@ -1,22 +1,46 @@
-.PHONY: examples
+.PHONY: all resume clean
 
-CC = xelatex
-EXAMPLES_DIR = examples
-RESUME_DIR = examples/resume
-CV_DIR = examples/cv
-RESUME_SRCS = $(shell find $(RESUME_DIR) -name '*.tex')
-CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
+MAKE_DIR = output
+tex_flags = -xelatex -silent -interaction=batchmode
 
-examples: $(foreach x, coverletter cv resume, $x.pdf)
+# *** *** ALL *** ***
 
-resume.pdf: $(EXAMPLES_DIR)/resume.tex $(RESUME_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
+all_files = $(wildcard ./*.tex)
 
-cv.pdf: $(EXAMPLES_DIR)/cv.tex $(CV_SRCS)
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
+all: $(all_files:.tex=.pdf)
 
-coverletter.pdf: $(EXAMPLES_DIR)/coverletter.tex
-	$(CC) -output-directory=$(EXAMPLES_DIR) $<
+# *** *** RESUME *** ***
+
+resume_files = $(wildcard ./CV_Davide_Fauri*.tex)
+
+resume: $(resume_files:.tex=.pdf)
+
+# *** *** SINGLE FILES *** ***
+
+# to build any pdf file; first create the temp folder, then run these commands on the .tex file
+%.pdf: %.tex | $(MAKE_DIR)
+ifndef TRAVIS # local run
+	# $< is the name of the source file
+	latexmk ${tex_flags} -outdir=${MAKE_DIR} $<
+else # travis run
+	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
+	if [ -f ${MAKE_DIR}/$(notdir $(<:.tex=.bcf)) ]; then biber --input-directory ${MAKE_DIR} $(notdir $(<:.tex=)); fi
+	tectonic -o $(MAKE_DIR) --keep-intermediates -r0 $<
+endif
+	# $@ is the name of the target being generated
+	cp ${MAKE_DIR}/$(notdir $@) .
+
+
+# create the MAKE_DIR folder
+$(MAKE_DIR):
+	mkdir -p $@
+
+# *** *** CLEAN *** ***
 
 clean:
-	rm -rf $(EXAMPLES_DIR)/*.pdf
+	rm -rf ${MAKE_DIR}/
+	rm -f $(all_files:.tex=.pdf)
+
+
+
+# rm -f $(notdir $(all_files:.tex=.bcf))
