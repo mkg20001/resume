@@ -8,6 +8,15 @@
 *.out
 *.toc
 
+## BibLaTeX auxiliary files:
+*.bbl
+*.bcf
+*.blg
+*.xdv
+
+# Latexmk files:
+*.fdb_latexmk
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
