@@ -777,6 +777,7 @@
 \DeclareFieldFormat[incollection]{title}{#1\par}
 \DeclareFieldFormat[patent]{title}{#1\par}
 \DeclareFieldFormat[thesis]{title}{#1\par}
+\DeclareFieldFormat[online]{title}{#1\par}
 
 \DeclareBibliographyDriver{article}{%
   \fontsize{9pt}{1em}\bodyfont%
@@ -909,6 +910,23 @@
     \setunit{\addcomma\space}%
     \printfield{type}%
     \setunit{\addcomma\space}%
+    \printfield{year}%
+    \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{online}{%
+  \fontsize{9pt}{1em}\bodyfont%
+  \printfield{title}%
+  \newblock%
+  \printnames{author}%
+  \par%
+  \newblock%
+  {%
+    \fontsize{8pt}{1em}\bodyfontlight\color{graytext}%
+    \printfield{url}%
+    \setunit*{\addcomma\space}%
     \printfield{year}%
     \newunit%
   }
