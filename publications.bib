@@ -1,0 +1,88 @@
+@inproceedings{fauri2019role,
+  author={Fauri, Davide and Kapsalakis, Michail and dos Santos, Daniel Ricardo and Costante, Elisa and den Hartog, Jerry and Etalle, Sandro},
+  year={2019},
+  title={Role Inference + Anomaly Detection = Situational Awareness in BACnet Networks},
+  booktitle={Detection of Intrusions and Malware, and Vulnerability Assessment},
+  publisher={Springer International Publishing},
+  pages={461--481},
+  abstract={In smart buildings, cyber-physical components (e.g., controllers, sensors, and actuators) communicate with each other using network protocols such as BACnet. Many of these devices are now connected to the Internet, enabling attackers to exploit vulnerabilities on protocols and devices to attack buildings. Situational awareness and intrusion detection are thus critical to provide operators with a clear and dynamic picture of their network, and to allow them to react to threats and attacks. Due to Smart Buildings being relatively dynamic and heterogeneous environments, situational awareness further needs to rapidly adapt to the appearance of new devices, and to provide enough context and information to understand a device's behavior. In this paper, we propose a novel approach to situational awareness that leverages a combination of learning and knowledge of possible role devices. Specifically, we introduce a role-based situational awareness and intrusion detection system to monitor BACnet building automation networks. The system discovers devices, classifies them according to functional roles and detects deviations from the assigned roles. To validate our approach, we use a simulated dataset generated from a BACnet testbed, as well as a real-world dataset coming from the building network of a Dutch university.},
+  isbn={978-3-030-22038-9}
+}
+
+@inproceedings{fauri2019leveraging,
+  author={Fauri, Davide and Kapsalakis, Michail and dos Santos, Daniel Ricardo and Costante, Elisa and den Hartog, Jerry and Etalle, Sandro},
+  year={2019},
+  title={Leveraging Semantics for Actionable Intrusion Detection in Building Automation Systems},
+  booktitle={Critical Information Infrastructures Security},
+  publisher={Springer International Publishing},
+  pages={113--125},
+  abstract={In smart buildings, physical components (e.g., controllers, sensors, and actuators) are interconnected and communicate with each other using network protocols such as BACnet. Many smart building networks are now connected to the Internet, enabling attackers to exploit vulnerabilities in critical buildings. Network monitoring is crucial to detect such attacks and allow building operators to react accordingly. In this paper, we propose an intrusion detection system for building automation networks that detects known and unknown attacks, as well as anomalous behavior. It does so by leveraging protocol knowledge and specific BACnet semantics: by using this information, the alerts raised by our system are meaningful and actionable. To validate our approach, we use a real-world dataset coming from the building network of a Dutch university, as well as a simulated dataset generated in our lab facilities.},
+  isbn={978-3-030-05849-4}
+}
+
+@online{fauri2017advisory,
+	Author = {Fauri, Davide},
+	Year = {2017},
+	Title = {ICS-CERT Advisory (ICSA-17-234-05) Saia Burgess Controls PCD Controllers},
+	Url = {https://ics-cert.us-cert.gov/advisories/ICSA-17-234-05},
+	Urldate = {2017-09-21},
+	}
+
+@inproceedings{fauri2017from,
+	Author = {Fauri, Davide and dos Santos, Daniel Ricardo and Costante, Elisa and den Hartog, Jerry and Etalle, Sandro and Tonetta, Stefano},
+	Year = {2017},
+	Title = {{From System Specification to Anomaly Detection (and back)}},
+	booktitle = {Proceedings of the 2017 Workshop on Cyber-Physical Systems Security and PrivaCy},
+	publisher = {Association for Computing Machinery},
+	pages = {13–24},
+	series = {CPS '17},
+	Abstract = {Industrial control systems have stringent safety and security de- mands. High safety assurance can be obtained by specifying the system with possible faults and monitoring it to ensure these faults are properly addressed. Addressing security requires considering unpredictable attacker behavior. Anomaly detection, with its data driven approach, can detect simple unusual behavior and system- based attacks like the propagation of malware; on the other hand, anomaly detection is less suitable to detect more complex process- based attacks [26, 35] and it provides little actionability in pres- ence of an alert. The alternative to anomaly detection is to use speci cation-based intrusion detection (see, e.g., [28, 30, 33, 45]), which is more suitable to detect process-based attacks, but is typi- cally expensive to set up and less scalable. We propose to combine a lightweight formal system speci cation with anomaly detection, providing data-driven monitoring. The combination is based on mapping elements of the speci cation to elements of the network tra c. This allows extracting locations to monitor and relevant con- text information from the formal speci cation, thus semantically enriching the raised alerts and making them actionable. On the other hand, it also allows under-speci cation of data-based proper- ties in the formal model; some predicates can be left uninterpreted and the monitoring can be used to learn a model for them. We demonstrate our methodology on a smart manufacturing use case.},
+	isbn = {978-1-450-35394-6},
+	}
+
+@inproceedings{fauri2017encryption,
+	Author = {Fauri, Davide and de Wijs, Bart and den Hartog, Jerry and Costante, Elisa and Zambon, Emmanuele and Etalle, Sandro},
+	Year = {2017},
+	Title = {{Encryption in ICS: a Blessing or a Curse?}},
+	booktitle={2017 IEEE International Conference on Smart Grid Communications (SmartGridComm)},
+	publisher = {IEEE},
+  	pages={289-294},
+	Abstract = {Nowadays, the internal network communication of Industrial Control Systems (ICS) usually takes place in unencrypted form. This, however, seems to be bound to change in the future: as we write, encryption of network traffic is seriously being considered as a standard for future ICS. In this paper we take a critical look at the pro's and con's of traffic encryption in ICS. We come to the conclusion that encrypting this kind of network traffic may actually result in a reduction of the security and overall safety. As such, sensible versus non- sensible use of encryption needs to be carefully considered both in developing ICS standards and systems.}
+	}
+
+@inproceedings{costante2016hybrid,
+	Author = {Costante, Elisa and Fauri, Davide and Etalle, Sandro and den Hartog, Jerry and Zannone, Nicola},
+	Year = {2016},
+	Title = {{A Hybrid Framework for Data Loss Prevention and Detection}},
+	Booktitle = {Workshop on Research for Insider Threats, 2016 IEEE Symposium on Security and Privacy (S\&P)},
+	Publisher = {IEEE},
+	Pages = {324--333},
+	abstract={Data loss, i.e. the unauthorized/unwanted disclosure of data, is a major threat for modern organizations. Data Loss Protection (DLP) solutions in use nowadays, either employ patterns of known attacks (signature-based) or try to find deviations from normal behavior (anomaly-based). While signature-based solutions provide accurate identification of known attacks and, thus, are suitable for the prevention of these attacks, they cannot cope with unknown attacks, nor with attackers who follow unusual paths (like those known only to insiders) to carry out their attack. On the other hand, anomaly-based solutions can find unknown attacks but typically have a high false positive rate, limiting their applicability to the detection of suspicious activities. In this paper, we propose a hybrid DLP framework that combines signature-based and anomaly-based solutions, enabling both detection and prevention. The framework uses an anomaly-based engine that automatically learns a model of normal user behavior, allowing it to flag when insiders carry out anomalous transactions. Typically, anomaly-based solutions stop at this stage. Our framework goes further in that it exploits an operator's feedback on alerts to automatically build and update signatures of attacks that are used to timely block undesired transactions before they can cause any damage.}
+	}
+
+@article{maggiolo2015low,
+	author = {Maggiolo, Dario and Fauri, Davide and Da Lio, Stefano and Bertucco, Alberto and Del Col, Davide and Guarnieri, Massimo},
+	year = {2015},
+	title = {A Low-Losses Topology for {VRFB} Stacks},
+	volume = {MA2015-02},
+	number = {8},
+	pages = {549},
+	URL = {http://ma.ecsdl.org/content/MA2015-02/8/549.abstract},
+	journal = {Meeting Abstracts}
+}
+
+@thesis{fauri2013ruumba,
+	author = {Fauri, Davide},
+	year = {2013},
+	title = {RUUMBA: a Range-only, Unscented, Undelayed, Mobile Beacon-Assisted Framework for WSN Discovery and Localization},
+	school = {Universit{\`a} degli Studi di Padova},
+	type = {MSc thesis}
+	}
+
+thesis{fauri2021SOMETHING,
+	author = {Fauri, Davide},
+	year = {2021},
+	title = {SOME TITLE},
+	school = {Eindhoven University of Technology},
+	type = {PhD thesis}
+	}

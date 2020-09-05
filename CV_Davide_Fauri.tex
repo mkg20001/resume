@@ -1,0 +1,55 @@
+%TODO \documentclass[11pt, a4paper, english]{awesome-cv}
+\documentclass[11pt, a4paper]{awesome-cv}
+\renewcommand*{\title}{CV Davide Fauri}% PDF metadata
+
+%%%%%%%%%% COLORS %%%%%%%%%%
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{RGB}{184,17,51} % rosso DEI
+\definecolor{color2}{RGB}{118,118,120} % grigio DEI
+\colorlet{awesome}{color1}
+
+% \definecolor{awesome}{HTML}{CA63A8}
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+\setbool{acvSectionColorHighlight}{true}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% FONTS AND STUFF %%%%%%%%%
+\fontdir[fonts/]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%
+% \usepackage[backend=biber,
+% % style=ieee,%authortitle,%
+% % sorting=ydnt,%
+% ]{biblatex}
+\addbibresource[datatype=bibtex]{publications.bib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%% MARGINS AND LENGTHS %%%%%%%%%%
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%% DOCUMENT %%%%%%%%%%
+\begin{document}
+
+%%%%% HEADER %%%%%
+\input{personal_info/contact}
+% Optional alignment arguments: [C,L,R]
+\makecvheader{}
+
+%%%%% FOOTER %%%%%
+\makecvfooter{\today}{Davide Fauri~~~·~~~Curriculum Vitae}{\thepage}
+
+
+\input{resume_eng/technical_skills}
+\input{resume_eng/work_experience}
+\input{resume_eng/education}
+\input{resume_eng/interests}
+\input{resume_eng/publications}
+
+\end{document}
