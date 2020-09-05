@@ -14,7 +14,7 @@ before_install:
 - conda update -q conda
 - conda info -a
 - conda install -c conda-forge tectonic==0.1.12
-- conda install -c malramsay biber==2.15
+- conda install -c malramsay biber==2.11
 
 script:
 - make
