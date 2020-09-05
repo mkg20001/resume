@@ -40,6 +40,10 @@ $(MAKE_DIR):
 clean:
 	rm -rf ${MAKE_DIR}/
 	rm -f $(all_files:.tex=.pdf)
+	rm -f $(notdir $(all_files:.tex=.synctex.gz))
+	rm -f $(notdir $(all_files:.tex=.run.xml))
+	rm -f $(notdir $(all_files:.tex=.bcf))
+	rm -f $(notdir $(all_files:.tex=.bcf))
 
 
 
