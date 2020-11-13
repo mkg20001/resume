@@ -1,6 +1,14 @@
-%TODO \documentclass[11pt, a4paper, english]{awesome-cv}
 \documentclass[11pt, a4paper]{awesome-cv}
 \renewcommand*{\title}{CV Davide Fauri}% PDF metadata
+\renewcommand*{\author}{Davide Fauri}%PDF metadata
+
+%%%%%%%%%% LANGUAGE SWITCH %%%%%%%%%%
+\usepackage[italian,main=english]{babel}
+\usepackage{iflang}
+\newcommand\EN[1]{\IfLanguageName{english}{#1}{}}
+\newcommand\IT[1]{\IfLanguageName{italian}{#1}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%% COLORS %%%%%%%%%%
 \definecolor{color0}{rgb}{0,0,0}% black
@@ -17,9 +25,6 @@
 \setbool{acvSectionColorHighlight}{true}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%% FONTS AND STUFF %%%%%%%%%
-\fontdir[./fonts/]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% BIBLIOGRAPHY %%%%%%%%%%
 % \usepackage[backend=biber,
@@ -31,7 +36,7 @@
 
 %%%%%%%%%% MARGINS AND LENGTHS %%%%%%%%%%
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%% DOCUMENT %%%%%%%%%%
@@ -39,17 +44,20 @@
 
 %%%%% HEADER %%%%%
 \input{personal_info/contact}
-% Optional alignment arguments: [C,L,R]
-\makecvheader{}
+% \quote{In 5 years, I will have automated myself out of a job}
+\position{PhD Candidate{\enskip\cdotp\enskip}Security for Cyber-Physical Systems}
+
+\makecvheader{} % Optional alignment arguments: [C,L,R]
 
 %%%%% FOOTER %%%%%
 \makecvfooter{\today}{Davide Fauri~~~·~~~Curriculum Vitae}{\thepage}
 
+%%%%% CONTENT %%%%%
 
-\input{resume_eng/technical_skills}
-\input{resume_eng/work_experience}
-\input{resume_eng/education}
-\input{resume_eng/extracurricular}
-\input{resume_eng/publications}
+\input{resume/technical_skills}
+\input{resume/work_experience}
+\input{resume/education}
+\input{resume/extracurricular}
+\input{resume/publications}
 
 \end{document}

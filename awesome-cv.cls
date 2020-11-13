@@ -2,11 +2,15 @@
 % Awesome CV Class File
 %
 % This class has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
+% https://github.com/DavideFauri/Awesome-CV
 %
-% Author:
+% Original author:
 % Claud D. Park <posquit0.bj@gmail.com>
 % http://www.posquit0.com
+% https://github.com/posquit0/Awesome-CV
+%
+% Modifications:
+% Davide Fauri <davide.fauri@gmail.com>
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
@@ -759,7 +763,8 @@
 	hyperref=true,
 	block=none,
 	backend=biber % {Options: bibtex, biber}
-	]{biblatex}
+  ]{biblatex}
+\RequirePackage{csquotes} % Recommended, properly typesets quotes in different languages
 
 % Avoid splitting entries across page break (only for 3 or fewer lines)
 % Tip: http://tex.stackexchange.com/a/51261

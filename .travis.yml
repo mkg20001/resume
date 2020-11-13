@@ -11,8 +11,8 @@ addons:
 
 cache:
   directories:
-  - "$HOME/.cache/Tectonic"
-  - "$HOME/miniconda"
+    - "$HOME/.cache/Tectonic"
+    - "$HOME/miniconda"
 
 env:
   global:
@@ -33,21 +33,20 @@ install:
 
   # If not yet installed, obtain Miniconda and tectonic
   - if ! command -v conda > /dev/null; then
-      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-      bash miniconda.sh -b -p $HOME/miniconda -u;
-      conda config --add channels conda-forge;
-      conda config --set always_yes yes;
-      conda install tectonic==0.1.11;
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    bash miniconda.sh -b -p $HOME/miniconda -u;
+    conda config --add channels conda-forge;
+    conda config --set always_yes yes;
+    conda install tectonic==0.3.1;
     fi
 
   # Install biber if required for compiling the references.
   # Biber version should match the biblatex version of Tectonic
-  - conda install -c malramsay biber==2.11 --yes
+  - conda install -c malramsay biber==2.12 --yes
   - conda info -a
 
 script:
-- make resume
-
+  - make resume
 
 deploy:
   provider: releases
