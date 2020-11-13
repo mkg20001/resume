@@ -1,13 +1,17 @@
+%%%%%% TITLE %%%%%%
+
 \EN{\cvsection[4]{Technical Skills}}
 \IT{\cvsection{Competenze Tecniche}}
+
+
+%%%%%% ENTRIES %%%%%%
 
 \newcommand\Da{\rule{0pt}{3.2ex}}
 \newcommand\De{\rule{0pt}{3ex}}
 \newcommand\T{\rule{0pt}{2.6ex}} % The row is at least this high
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % The row is at least this deep
 
-\begin{cvskills}
-  % Data
+\newcommand{\skillsData}{
   \cvskill{
     \begin{tabular}{r@{}}
       Data\Da
@@ -33,8 +37,10 @@
       \B
     \end{tabular}
   }
+}
 
-  % DevOps
+
+\newcommand{\skillsDevOps}{
   \cvskill{%
     \begin{tabular}{r@{}}%
       DevOps\De%
@@ -55,24 +61,30 @@
       \B
     \end{tabular*}
   }
+}
 
-  % Security
+
+\newcommand{\skillsSecurity}{
   \cvskill{%
-    \EN{Security}%
-    \IT{Sicurezza}%
-  }{
-    \EN{Network monitoring (Wireshark/Zeek), penetration testing (Kali/Metasploit), malware analysis (IDA/Cutter), lockpicking}
-    \IT{Monitoraggio reti (Wireshark/Zeek), penetration testing (Kali/Metasploit), analisi di malware (IDA/Cutter), lockpicking}
-  }
+  \EN{Security}%
+  \IT{Sicurezza}%
+}{
+  \EN{Network monitoring (Wireshark/Zeek), penetration testing (Kali/Metasploit), malware analysis (IDA/Cutter), lockpicking}
+  \IT{Monitoraggio reti (Wireshark/Zeek), penetration testing (Kali/Metasploit), analisi di malware (IDA/Cutter), lockpicking}
+}
+}
 
-  % Graphics
+
+\newcommand{\skillsMedia}{
   \cvskill{%
-    Media%
-  }{
-    \LaTeX{} + TiKz, Powerpoint, Photoshop, Audacity, Final Cut, DaVinci Resolve
-  }
+  Media%
+}{
+  \LaTeX{} + TiKz, Powerpoint, Photoshop, Audacity, Final Cut, DaVinci Resolve
+}
+}
 
-  % Languages
+
+\newcommand{\skillsLanguages}{
   \cvskill{%
     \EN{Languages}%
     \IT{Lingue}%
@@ -80,12 +92,22 @@
     \EN{Italian, English (TOEFL 111/120), Dutch (base)}
     \IT{Italiano, Inglese (TOEFL 111/120), Olandese (base)}
   }
+}
+
+
+%%%%%% LAYOUT %%%%%%
+
+\begin{cvskills}
+
+  \skillsData
+
+  \skillsDevOps
+
+  \skillsSecurity
+
+  \skillsMedia
+
+  \skillsLanguages
+
 \end{cvskills}
 
-% \cvskill{
-%   \EN{}
-%   \IT{}
-% }{
-%   \EN{}
-%   \IT{}
-% }

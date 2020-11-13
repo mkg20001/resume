@@ -1,7 +1,12 @@
+%%%%%% TITLE %%%%%%
+
 \EN{\cvsection[5]{Extracurricular activities}}
 \IT{\cvsection{Attività extracurriculari}}
 
-\begin{cventries}
+
+%%%%%% ENTRIES %%%%%%
+
+\newcommand{\extraTheatre}{%
   \cventry%
   {% Role
     \EN{Theatre}
@@ -23,8 +28,11 @@
       }
     \end{cvitems}
   }
+}
 
-  \cventry%
+
+\newcommand{\extraCouncil}{
+  \cventry
   {% Role
     \EN{PhD~/~PDEng Council Member}
     \IT{Membro del PhD~/~PDEng Council}
@@ -44,14 +52,35 @@
       }
     \end{cvitems}
   }
+}
 
-  % \cventry%
-  %     {Sports} % Role
-  %     {} % Title
-  %     {} % Group/Location
-  %     {usually} % Date(s)
-  %     {\begin{cvitems}
-  %         \item {Volleyball, cycling, running, martial arts.}
-  %     \end{cvitems}}
+
+\newcommand{\extraSports}{
+  \cventry
+  {Sports} % Role
+  {} % Title
+  {} % Group/Location
+  {usually} % Date(s)
+  {
+    \begin{cvitems}
+      \item {
+        \EN{Volleyball, cycling, running, martial arts}
+        \IT{Pallavolo, ciclismo, corsa, arti marziali}
+      }
+    \end{cvitems}
+  }
+}
+
+
+%%%%%% LAYOUT %%%%%%
+
+\begin{cventries}
+
+  \extraTheatre
+
+  \extraCouncil
+
+  % \extraSports
+
 \end{cventries}
 

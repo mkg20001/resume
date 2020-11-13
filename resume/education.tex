@@ -1,9 +1,13 @@
+%%%%%% TITLE %%%%%%
+
 \EN{\cvsection{Education}}
 \IT{\cvsection{Educazione}}
 
-\begin{cventries}
 
-  \cventry%
+%%%%%% ENTRIES %%%%%%
+
+\newcommand{\educationMooc}{
+  \cventry
   {Coursera, Stanford University, MITx, LinkedIn Learning}
   {
     \EN{Self-taught and MOOCs}
@@ -39,8 +43,11 @@
       }
     \end{cvitems}
   }
+}
 
-  \cventry%
+
+\newcommand{\educationMaster}{
+  \cventry
   {Università degli Studi di Padova}
   {
     \EN{MSc in Automation Engineering}
@@ -84,7 +91,10 @@
       % \item {A Wireless Sensor Network was localized using only Received Signal Strength measurements between nodes: this was accomplished by dynamical path planning of an autonomous robot mobile beacon, to guarantee the redundant rigidity of the underlying distance graph. Unscented Kalman Filters and aggressive pruning of Gaussian Mixture Models were used to improve computational and energy efficiency.}
     \end{cvitems}
   }
+}
 
+
+\newcommand{\educationBachelor}{
   \cventry%
   {Università degli Studi di Padova}
   {
@@ -125,5 +135,17 @@
       % \item {This thesis was connected to an internship at Teletronic S.r.l., during which both a Siemens PLC and its connected Human-Machine Interface were developed to automatize, supervise and control a biomass power plant for electricity and heat co-generation. A novel "key-value" solution was designed and implemented to efficiently update alarm thresholds.}
     \end{cvitems}
   }
+}
+
+
+%%%%%% LAYOUT %%%%%%
+
+\begin{cventries}
+
+  \educationMaster
+
+  \educationMooc
+
+  \educationBachelor
 
 \end{cventries}

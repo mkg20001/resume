@@ -1,8 +1,13 @@
+%%%%%% TITLE %%%%%%
+
 \EN{\cvsection[4]{Work experience}}
 \IT{\cvsection{Esperienze lavorative}}
 
-\begin{cventries}
-  \cventry%
+
+%%%%%% ENTRIES %%%%%%
+
+\newcommand{\workPhD}{
+  \cventry
   {
     \EN{Network intrusion detection on IoT systems, building automation, and critical infrastructures}
     \IT{Detezione di intrusioni in reti Internet of Things (IoT), building automation, ed infrastrutture critiche}
@@ -33,14 +38,10 @@
       }
     \end{cvitems}
   }
+}
 
-  % \cventry%
-  %     {Università degli Studi di Padova}
-  % 	{State exam for engineering profession}
-  % 	{Padua, IT}
-  % 	{2015}
-  % 	{}
 
+\newcommand{\workDII}{
   \cventry%
   {
     \EN{Modelization and control of power electronics for Vanadium Redox Flow Batteries}
@@ -64,7 +65,10 @@
       }
     \end{cvitems}
   }
+}
 
+
+\newcommand{\workPowerControlSystems}{
   \cventry%
   {
     \EN{Technological transfer on power conversion for batteries}
@@ -84,7 +88,10 @@
       }
     \end{cvitems}
   }
+}
 
+
+\newcommand{\workDISC}{
   \cventry%
   {
     \EN{Construction and characterization of a Vanadium Redox Flow Battery prototype cell}
@@ -104,7 +111,10 @@
       }
     \end{cvitems}
   }
+}
 
+
+\newcommand{\workTeletronic}{
   \cventry%
   {
     \EN{Development of PLC logic and HMI panel for a co-generation biomass power plant}
@@ -124,5 +134,29 @@
       }
     \end{cvitems}
   }
+}
+
+
+% \cventry%
+%     {Università degli Studi di Padova}
+% 	{State exam for engineering profession}
+% 	{Padua, IT}
+% 	{2015}
+% 	{}
+
+
+%%%%%% LAYOUT %%%%%%
+
+\begin{cventries}
+
+\workPhD
+
+\workDII
+
+\workPowerControlSystems
+
+\workDISC
+
+\workTeletronic
 
 \end{cventries}
