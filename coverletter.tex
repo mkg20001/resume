@@ -1,40 +1,22 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for Cover Letter
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Authors:
-% Claud D. Park <posquit0.bj@gmail.com>
-% Lars Richter <mail@ayeks.de>
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
-
-
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
+\renewcommand*{\title}{Motivation Letter Davide Fauri}% PDF metadata
 
-% Configure page margins with geometry
+
+%%%%%%%%%% MARGINS AND LENGTHS %%%%%%%%%%
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Specify the location of the included fonts
-\fontdir[fonts/]
+%%%%%%%%%% FONTS AND STUFF %%%%%%%%%
+\fontdir[./fonts/]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
+%%%%%%%%%% COLORS %%%%%%%%%%
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{RGB}{184,17,51} % rosso DEI
+\definecolor{color2}{RGB}{118,118,120} % grigio DEI
+\colorlet{awesome}{color1}
+
 % \definecolor{awesome}{HTML}{CA63A8}
-
-% Colors for text
-% Uncomment if you would like to specify your own color
 % \definecolor{darktext}{HTML}{414141}
 % \definecolor{text}{HTML}{333333}
 % \definecolor{graytext}{HTML}{5D5D5D}
@@ -49,31 +31,8 @@
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{./examples/profile}
-\name{Claud D.}{Park}
-\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
-
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \medium{madium-id}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{extra informations}
-
-\quote{``Be the change that you want to see in the world."}
+\input{resume/contact}
 
 
 %-------------------------------------------------------------------------------
@@ -81,8 +40,9 @@
 %	All of the below lines must be filled out
 %-------------------------------------------------------------------------------
 % The company being applied to
+\newcommand\company{Google}
 \recipient
-  {Company Recruitment Team}
+  {\company Recruitment Team}
   {Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
@@ -104,11 +64,8 @@
 \makecvheader[R]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Claud D. Park~~~·~~~Cover Letter}
-  {}
+\makecvfooter{\today}{Davide Fauri~~~·~~~Cover Letter for \company}{}
+
 
 % Print the title with above letter informations
 \makelettertitle
@@ -118,14 +75,23 @@
 %-------------------------------------------------------------------------------
 \begin{cvletter}
 
-\lettersection{About Me}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+  \lettersection{About Me}
+  % State the reason for the letter, name the position or type of work you are applying for and identify the source from whichc you learned of the opening (i.e. career developmente center, newspaper, employment service, personal contact)
 
-\lettersection{Why Google?}
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+  \lettersection{Why \company?}
+  % Indicate why you are interested in the position, the company, its products, services - above all, stress what you can do for the employer.
+  % If you are a recent graduate, explain how your academic background makes you a qualified candidate for the postion.
+  % If you have practical work experience, point out specific achievements or unique qualifications.
+  % Try not to repeat the same information ther eader will find in the resume.
+  % Refer the reader to the enclosed resume or application which summarizes your qualifications, training, and experiences.
+  % The purpose of this section is to strengthen your resume by providing details which bring your experiences to life.
 
-\lettersection{Why Me?}
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+  \lettersection{Why Me?}
+  % Request a personal interview and indicate your flexibility as to the time and place.
+  % Repeat your phone number in the letter and offer assistance to help in a speedy response.
+  % For example, state that you will be in the city where the company is located on a certain date and would like to set up an interview.
+  % Alternatively, state that you will call on a certain date to set up an interview.
+  % End the letter by thanking the employer for taking time to consider your credentials.
 
 \end{cvletter}
 
