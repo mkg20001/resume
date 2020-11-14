@@ -6,44 +6,42 @@
 
 %%%%%% ENTRIES %%%%%%
 
-\newcommand\Da{\rule{0pt}{3.2ex}}
-\newcommand\De{\rule{0pt}{3ex}}
 \newcommand\T{\rule{0pt}{2.6ex}} % The row is at least this high
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % The row is at least this deep
 
 \newcommand{\skillsData}{
-  \cvskill{
+  \cvskill{%
     \begin{tabular}{r@{}}
-      Data\Da
-    \end{tabular}
+      Data\rule{0pt}{3.2ex}
+    \end{tabular}%
   }{
     \hspace*{-1.6ex}
-    \begin{tabular}{l l}
+    \begin{tabular*}{\textwidth * \real{0.9}}{l@{\extracolsep{\fill}} l}
       {\bf Science}
-       &
+      &
       \EN{Classification, regression, anomaly detection, time series forecasting, Bayes networks, association rules}
-      \IT{Classificazione, regressione, detezione di anomalie, predizione di serie temporali, reti di Bayes, regole di associazione}
+      \IT{Classificazione, regressione, detezione di anomalie, predizione di serie temporali, reti di Bayes, regole d'associazione}
       \\
       \EN{\bf Analysis}
       \IT{\bf Analisi}
-       &
+      &
       \EN{Data cleaning, feature engineering, pandas, tidyverse, Excel, RapidMiner, SQL/NoSQL (postgreSQL/mongoDB)}
       \IT{Pulizia dati, ingegneria delle feature, pandas, tidyverse, Excel, RapidMiner, SQL/NoSQL (postgreSQL/mongoDB)}
       \\
       \EN{\bf Visualization}
-      \IT{\bf Visualizzazione}
-       &
+      \IT{\bf Viz}
+      &
       Jupyter notebooks, Plotly, Bokeh, matplotlib, ggplot%Tableau
       \B
-    \end{tabular}
+    \end{tabular*}
   }
 }
 
 
 \newcommand{\skillsDevOps}{
   \cvskill{%
-    \begin{tabular}{r@{}}%
-      DevOps\De%
+    \begin{tabular}{r@{}}
+      DevOps\rule{0pt}{3ex}
     \end{tabular}%
   }{
     \hspace*{-1.6ex}
@@ -66,21 +64,21 @@
 
 \newcommand{\skillsSecurity}{
   \cvskill{%
-  \EN{Security}%
-  \IT{Sicurezza}%
-}{
-  \EN{Network monitoring (Wireshark/Zeek), penetration testing (Kali/Metasploit), malware analysis (IDA/Cutter), lockpicking}
-  \IT{Monitoraggio reti (Wireshark/Zeek), penetration testing (Kali/Metasploit), analisi di malware (IDA/Cutter), lockpicking}
-}
+    \EN{Security}%
+    \IT{Sicurezza}%
+  }{
+    \EN{Network monitoring (Wireshark/Zeek), penetration testing (Kali/Metasploit), malware analysis (IDA/Cutter), lockpicking}
+    \IT{Monitoraggio reti (Wireshark/Zeek), penetration testing (Kali/Metasploit), analisi di malware (IDA/Cutter), lockpicking}
+  }
 }
 
 
 \newcommand{\skillsMedia}{
   \cvskill{%
-  Media%
-}{
-  \LaTeX{} + TiKz, Powerpoint, Photoshop, Audacity, Final Cut, DaVinci Resolve
-}
+    Media%
+  }{
+    \LaTeX{} + TiKz, Powerpoint, Photoshop, Audacity, Final Cut, DaVinci Resolve
+  }
 }
 
 
