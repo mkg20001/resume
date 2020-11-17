@@ -1,52 +1,20 @@
 language: generic
 
-addons:
-  apt:
-    update: false
-    packages:
-      # to read from PDFs
-      - ghostscript
-      # needed for makeindex
-      - texlive-binaries
-
-cache:
-  directories:
-    - "$HOME/.cache/Tectonic"
-    - "$HOME/miniconda"
+services:
+  - docker
 
 env:
   global:
-    - MAGICK_CONFIGURE_PATH=$HOME/.config/ImageMagick
-
-before_install:
-  # Edit ImageMagick policy to read PDF and write PNG
-  - echo $MAGICK_CONFIGURE_PATH
-  - mkdir -p $MAGICK_CONFIGURE_PATH
-  - echo '<policymap>' > $MAGICK_CONFIGURE_PATH/policy.xml
-  - echo '<policy domain="coder" rights="read" pattern="PDF" />' >> $MAGICK_CONFIGURE_PATH/policy.xml
-  - echo '</policymap>' >> $MAGICK_CONFIGURE_PATH/policy.xml
-  - sudo rm /etc/ImageMagick-6/policy.xml
-
-install:
-  # Needed to check if conda already installed
-  - export PATH="$HOME/miniconda/bin:$PATH"
-
-  # If not yet installed, obtain Miniconda and tectonic
-  - if ! command -v conda > /dev/null; then
-    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-    bash miniconda.sh -b -p $HOME/miniconda -u;
-    conda config --add channels conda-forge;
-    conda config --set always_yes yes;
-    conda install tectonic==0.3.1;
-    fi
-
-  # Install biber if required for compiling the references.
-  # Biber version should match the biblatex version of Tectonic
-  - conda install -c malramsay biber==2.12 --yes
-  - conda info -a
+    - FILENAME='CV_Davide_Fauri'
+  jobs:
+    - LANGUAGE='italian' SHORTLANG='ita'
+    - LANGUAGE='english' SHORTLANG='eng'
 
 script:
-  - make resume
+  - cat $FILENAME.tex | sed 's|^\\\\usepackage\[[a-z,=]*\]{babel}|\\\\usepackage\['"$LANGUAGE"'\]{babel}|' > $FILENAME-$SHORTLANG.tex
+  - ls -al *.tex
+  - docker run --mount src=$TRAVIS_BUILD_DIR,dst=/usr/src/tex,type=bind dxjoke/tectonic-docker
+    /bin/sh -c "tectonic --keep-intermediates --reruns 0 $FILENAME-$SHORTLANG.tex; biber $FILENAME-$SHORTLANG; tectonic --reruns 1 $FILENAME-$SHORTLANG.tex"
 
 deploy:
   provider: releases
@@ -55,7 +23,6 @@ deploy:
   file_glob: true
   file:
     - CV_*.pdf
-    # - CV_*_eng*.png
   on:
     tags: true
     all_branches: true
