@@ -1,12 +1,14 @@
 \documentclass[11pt, a4paper]{awesome-cv}
-\renewcommand*{\title}{CV Davide Fauri}% PDF metadata
-\renewcommand*{\author}{Davide Fauri}%PDF metadata
+\renewcommand*{\title}{CV Maciej Krüger}% PDF metadata
+\renewcommand*{\author}{Maciej Krüger}%PDF metadata
 
 %%%%%%%%%% LANGUAGE SWITCH %%%%%%%%%%
-\usepackage[italian,main=english]{babel}
+\usepackage[german,main=english]{babel}
 \usepackage{iflang}
 \newcommand\EN[1]{\IfLanguageName{english}{#1}{}}
-\newcommand\IT[1]{\IfLanguageName{italian}{#1}{}}
+% workarround for \IT leftover
+\newcommand\IT[1]{\IfLanguageName{german}{#1}{}}
+\newcommand\DE[1]{\IfLanguageName{german}{#1}{}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -15,7 +17,7 @@
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
 
 \definecolor{color0}{rgb}{0,0,0}% black
-\definecolor{color1}{RGB}{184,17,51} % rosso DEI
+\definecolor{color1}{RGB}{54,154,205} % rosso DEI
 \definecolor{color2}{RGB}{118,118,120} % grigio DEI
 \colorlet{awesome}{color1}
 
@@ -34,7 +36,7 @@
 % % style=ieee,%authortitle,%
 % % sorting=ydnt,%
 % ]{biblatex}
-\addbibresource[datatype=bibtex]{publications.bib}
+% \addbibresource[datatype=bibtex]{publications.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%% MARGINS AND LENGTHS %%%%%%%%%%
@@ -49,21 +51,21 @@
 \input{resume/contact}
 % \quote{In 5 years, I will have automated myself out of a job}
 \position{%
-  \EN{PhD Candidate{\enskip\cdotp\enskip}Security for Cyber-Physical Systems}
-  \IT{PhD Candidate{\enskip\cdotp\enskip}Sicurezza per Sistemi Cyber-Fisici}
+  \EN{Developer: Web, DevOps, FOSS}
+  \DE{Entwickler: Web, DevOps, FOSS}
 }
 
 \makecvheader{} % Optional alignment arguments: [C,L,R]
 
 %%%%% FOOTER %%%%%
-\makecvfooter{\today}{Davide Fauri~~~·~~~Curriculum Vitae}{\thepage}
+\makecvfooter{\today}{Maciej Krüger~~~·~~~Curriculum Vitae}{\thepage}
 
 %%%%% CONTENT %%%%%
 
 \input{resume/technical_skills}
 \input{resume/work_experience}
 \input{resume/education}
-\input{resume/extracurricular}
-\input{resume/publications}
+% \input{resume/extracurricular}
+% \input{resume/publications}
 
 \end{document}
