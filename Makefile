@@ -1,4 +1,4 @@
-.PHONY: all resume clean
+.PHONY: all resume clean install
 
 MAKE_DIR = output
 tex_flags = -xelatex -silent -interaction=batchmode
@@ -39,3 +39,9 @@ clean:
 	rm -f $(notdir $(all_files:.tex=.synctex.gz))
 	rm -f $(notdir $(all_files:.tex=.run.xml))
 	rm -f $(notdir $(all_files:.tex=.bcf))
+
+# *** *** INSTALL *** ***
+
+install:
+	mkdir -p ${out}
+	cp -r output/*.pdf ${out}
