@@ -11,7 +11,7 @@ all: $(all_files:.tex=.pdf)
 
 # *** *** RESUME *** ***
 
-resume_files = $(wildcard ./CV_Davide_Fauri*.tex)
+resume_files = $(wildcard ./CV_Maciej_Krüger*.tex)
 
 resume: $(resume_files:.tex=.pdf)
 
