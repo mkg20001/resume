@@ -1,7 +1,7 @@
 %%%%%% TITLE %%%%%%
 
 \EN{\cvsection[4]{Technical Skills}}
-\IT{\cvsection{Competenze Tecniche}}
+\DE{\cvsection{Technische Kompetenzen}}
 
 
 %%%%%% ENTRIES %%%%%%
@@ -103,13 +103,52 @@
 }
 
 
+\newcommand{\skillsCode}{
+  \cvskill{%
+    \begin{tabular}{r@{}}
+      Code\rule{0pt}{3.8ex}
+    \end{tabular}%
+  }{
+    \hspace*{-1.6ex}
+    \begin{tabular*}{\textwidth * \real{0.9}}{l l}
+      \T
+      \EN{\bf Proficient}
+      \DE{\bf }
+      &
+      javascript (node, vueJS, hapiJS), C, nix, git, bash, php
+      \\
+      \EN{\bf Learning}
+      \DE{\bf }
+      &
+      rust, kotlin (java), go
+      \B
+    \end{tabular*}
+  }
+}
+
+\newcommand{\skillsCICD}{
+  \cvskill{%
+    CI/CD%
+  }{
+    travis CI, gitlab CI, docker
+  }
+}
+
+\newcommand{\skillsAdministration}{
+  \cvskill{%
+    Administration%
+  }{
+    nixOS, ubuntu, lxd
+  }
+}
+
 \newcommand{\skillsLanguages}{
   \cvskill{%
     \EN{Languages}%
-    \IT{Lingue}%
+    \DE{Sprachen}%
   }{
-    \EN{Italian, English (TOEFL 111/120), Dutch (base)}
-    \IT{Italiano, Inglese (TOEFL 111/120), Olandese (base)}
+    \EN{German, English, Polish}
+    \DE{Deutsch, Polnisch, Englisch}
   }
 }
 
@@ -118,13 +157,11 @@
 
 \begin{cvskills}
 
-  \skillsData
+  \skillsCode
 
-  \skillsDevOps
+  \skillsCICD
 
-  \skillsSecurity
-
-  \skillsMedia
+  \skillsAdministration
 
   \skillsLanguages
 
