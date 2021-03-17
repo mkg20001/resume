@@ -1,0 +1,247 @@
+%%%%%% TITLE %%%%%%
+
+\EN{\cvsection[3]{Projects}}
+\DE{\cvsection{Projekte}}
+
+%%%%%% COMMANDS %%%%%%
+
+\newcommand*{\gh}[2]{
+  \href{https://github.com/#1}{{\faGithub} {
+    \EN{{#2} on GitHub}
+    \DE{{#2} auf GitHub}
+  }}
+}
+
+\newcommand*{\gplay}[2]{
+  \href{https://play.google.com/store/apps/details?id=#1}{{\faGooglePlay} {
+    \EN{{#2} on Google Play}
+    \DE{{#2} auf Google Play}
+  }}
+}
+
+\newcommand*{\ghs}[1]{
+  \href{https://github.com/#1}{{\faGithub}}
+}
+
+\newcommand*{\tgs}[1]{
+  \href{https://t.me/#1}{{\faTelegram}}
+}
+
+\newcommand*{\npms}[1]{
+  \href{https://npm.im/#1}{{\faNpm}}
+}
+
+\newcommand{\wip}{
+  { \color{red} \textbf{\textsuperscript{WIP}} }
+}
+
+%%%%%% ENTRIES %%%%%%
+
+\newcommand{\projectSolar}{
+  \cventry%
+  {
+    \EN{Operating System that tries to combine nixOS' unique features with ease of use}
+    \DE{}
+  }
+  {
+    \EN{solarOS}
+    \DE{}
+  }
+  {alpha stage}
+  {
+    \EN{2020 -- ongoing}
+    \DE{}
+  }
+  {
+    \begin{cvitems}
+      \item {
+        \ghs{ssd-solar/sunshine}
+        \EN{Automatic updates for nixOS (sunshine)\wip}
+        \DE{}
+      }
+      \item {
+        \ghs{ssd-solar/distinst}
+        \EN{Graphical installer for nixOS (distinst fork)\wip}
+        \DE{}
+      }
+      \item {
+        \ghs{ssd-solar/dsync-service}
+        \EN{Automatic synchronisation of user and os configuration (dsync)\wip}
+        \DE{}
+      }
+    \end{cvitems}
+  }
+}
+
+\newcommand{\projectNixosPort}{
+  \cventry%
+  {
+    \EN{Made different applications and services available on nixOS}
+    \DE{}
+  }
+  {
+    \EN{Ported different software to nixOS}
+    \DE{}
+  }
+  {ongoing}
+  {
+    \EN{2020 -- ongoing}
+    \DE{}
+  }
+  {
+    \begin{cvitems}
+      \item {
+        \ghs{NixOS/nixpkgs/tree/master/pkgs/desktops/cinnamon}
+        \EN{Cinnamon Desktop Environment for nixOS}
+        \DE{}
+      }
+      \item {
+        \ghs{mkg20001/hubs-flake}
+        \EN{Mozilla Hubs extended reality service for nixOS\wip}
+        \DE{}
+      }
+      \item {
+        \ghs{mkg20001/safenet-nixos}
+        \EN{Safenet Authentication Client for nixOS}
+        \DE{}
+      }
+      \item {
+        \ghs{NixOS/nixpkgs/pulls?q=is\%3Apr+is\%3Amerged+author\%3Amkg20001+sort\%3Aupdated-desc+}
+        \EN{Many other tiny utilities}
+        \DE{}
+      }
+    \end{cvitems}
+  }
+}
+
+\newcommand{\projectNPM}{
+  \cventry%
+  {
+    \EN{Different utilities to make development easier}
+    \DE{}
+  }
+  {
+    \EN{Varius npm packages}
+    \DE{}
+  }
+  {in production use}
+  {
+    \EN{2018 -- ongoing}
+    \DE{}
+  }
+  {
+    \begin{cvitems}
+      \item {
+        \ghs{mkg20001/it-pb-rpc}
+        \npms{it-pb-rpc}
+        \EN{Async Iterator utility library for length-prefixed protocol-buffers streams (it-pb-rpc) - 6k weekly downloads}
+        \DE{}
+      }
+      \item {
+        \ghs{mkg20001/scriptrr}
+        \npms{scriptrr}
+        \EN{Library to help with calling bash scripts from node (scriptrr)}
+        \DE{}
+      }
+      \item {
+        \ghs{libp2p/js-libp2p-stardust}
+        \npms{libp2p-stardust}
+        \EN{(depracted) Libp2p transport that relays connections and let's peers discover each other}
+        \DE{}
+      }
+      \item {
+        \ghs{mkg20001/mkgs-tool}
+        \npms{mkgs-tool}
+        \EN{Tool to help with managing my project configurations (mkgs-tool)}
+        \DE{}
+      }
+    \end{cvitems}
+  }
+}
+
+\newcommand{\projectTGBot}{
+  \cventry%
+  {
+    \EN{Adding different functionalities to Telegram}
+    \DE{}
+  }
+  {
+    \EN{Various Bots for Telegram}
+    \DE{}
+  }
+  {in production use}
+  {
+    \EN{2020 -- ongoing}
+    \DE{}
+  }
+  {
+    \begin{cvitems}
+      \item {
+        \ghs{mkg20001/tg-sticker-convert-bot}
+        \tgs{sticker_convert_bot}
+        \EN{Bot to convert image files into the format required by Telegram Stickers}
+        \DE{}
+      }
+      % \item { \gh {mkg20001/tg-sticker-convert-bot} {Telegram Sticker Convert Bot} }
+      \item {
+        \ghs{mkg20001/tg-gif-export-bot}
+        \tgs{gif_export_bot}
+        \EN{Bot to export Telegram MP4 gifs as regular gifs}
+        \DE{}
+      }
+      % \item { \gh {mkg20001/tg-gif-export-bot} {Telegram Gif Export Bot} }
+      \item {
+        \ghs{mkg20001/tg-asticker2vid-bot}
+        \tgs{asticker2vid_bot}
+        \EN{Bot to export Telegram Animated Stickers as Video Files}
+        \DE{}
+      }
+      % \item { \gh {mkg20001/tg-gif-export-bot} {Telegram Animated Sticker to Video Bot} }
+    \end{cvitems}
+  }
+}
+
+\newcommand{\projectZeronetAndroid}{
+  \cventry%
+  {
+    \EN{Made the ZeroNet P2P Platform available on mobile devices}
+    \DE{}
+  }
+  {
+    \EN{Android App for Zeronet}
+    \DE{}
+  }
+  {not maintained}
+  {
+    \EN{2019 -- 2020}
+    \DE{}
+  }
+  {
+    \begin{cvitems}
+      \item {
+        \EN{4.000+ Users}
+        \DE{}
+      }
+      \item { \gh {HelloZeroNet/ZeroNet-kivy} {ZeroNet Android} }
+      \item { \gplay {net.mkg20001.zeronet} {ZeroNet Android} }
+    \end{cvitems}
+  }
+}
+
+
+
+%%%%%% LAYOUT %%%%%%
+
+\begin{cventries}
+
+  \projectSolar
+
+  \projectNixosPort
+
+  \projectNPM
+
+  \projectTGBot
+
+  \projectZeronetAndroid
+
+\end{cventries}
