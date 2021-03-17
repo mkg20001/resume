@@ -37,7 +37,7 @@
 
 ## Download
 
-My résumé is available for both cybersecurity ([ENG](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-eng.pdf), [ITA](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-ita.pdf)) and data/programming ([ENG](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-eng.pdf), [ITA](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-ita.pdf)) positions.
+<!-- My résumé is available for both cybersecurity ([ENG](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-eng.pdf), [ITA](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Security/CV_Davide_Fauri-ita.pdf)) and data/programming ([ENG](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-eng.pdf), [ITA](https://github.com/DavideFauri/resume/releases/download/Nov-2020-Data/CV_Davide_Fauri-ita.pdf)) positions. -->
 
 <!-- | Page. 1 | Page. 2 | -->
 <!-- |:-------:|:-------:| -->
