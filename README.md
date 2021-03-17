@@ -1,15 +1,18 @@
 <h1 align="center">
-  <a href="https://github.com/DavideFauri/resume" title="Résumé Davide Fauri">
-    <img alt="DavideFauri" src="https://github.com/DavideFauri/resume/raw/master/icon.png" width="200px" height="200px" />
+  <!--
+  <a href="https://github.com/mkg20001/resume" title="Résumé Maciej Krüger">
+    <img alt="MaciejKrüger" src="https://github.com/mkg20001/resume/raw/master/mug.jpg" width="200px" height="200px" />
   </a>
   <br />
-  Davide Fauri
+  -->
+  Maciej Krüger
 </h1>
 
 <p align="center">
   Professional résumé
 </p>
 
+<!--
 <div align="center">
   <a href="https://travis-ci.com/github/DavideFauri/resume">
     <img alt="TravisCI" src="https://travis-ci.com/DavideFauri/resume.svg?branch=master" />
@@ -27,6 +30,7 @@
     <img alt="Résumé - Data (Italiano)" src="https://img.shields.io/badge/CV%20Data%20🇮🇹-pdf-green.svg" />
   </a>
 </div>
+-->
 
 <br />
 
@@ -50,6 +54,8 @@ If the committed version is tagged, the PDF files are published and should be ac
 ### Local compilation
 
 For *local* compilation, a full TeX distribution is assumed. There are many distributions available, [TeX Live](tug.org/texlive) is the usual recommendation.
+
+Additionally a default.nix is provided for launching a nix-shell or building the CV. For building on nix use the commands in a `nix-shell` or directly build with `nix-build`.
 
 The usage is simple: at a command prompt, just run
 
